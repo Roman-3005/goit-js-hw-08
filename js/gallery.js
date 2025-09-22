@@ -67,23 +67,22 @@ const images = [
 const gallery = document.querySelector(".gallery");
 
 const markup = images.map(item =>
-  `<li class="gallery-item"><a class="gallery-link" href="${item.preview}"><img class="gallery-image" src="${item.preview}" data-source="${item.original}" alt="${item.description}" /></a></li>`
+  `<li class="gallery-item">
+  <a class="gallery-link" href="${item.original}">
+  <img
+  class="gallery-image"
+  src="${item.preview}" 
+  data-source="${item.original}" 
+  alt="${item.description}" 
+  />
+  </a>
+  </li>`
 ).join("");
 
 gallery.insertAdjacentHTML("beforeend", markup);
 
-// event.preventDefault()
-
 console.log(markup);
 
 
-{/* <li class="gallery-item">
-  
-    <img
-      class="gallery-image"
-      src="small-image.jpg"
-      data-source="large-image.jpg"
-      alt="Image description"
-    />
-  </a>
-</li> */}
+
+// event.preventDefault()
